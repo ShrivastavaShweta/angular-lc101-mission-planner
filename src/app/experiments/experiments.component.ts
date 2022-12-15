@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperimentsComponent implements OnInit {
 
+  experimentList: string[] = ['Mars soil sample', 'Plant growth in habitat', 'Human bone density'];
+  expBeingEdited : string = null;
+
   constructor() { }
 
   ngOnInit() {
