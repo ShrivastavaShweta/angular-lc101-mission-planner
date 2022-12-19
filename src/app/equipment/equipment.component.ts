@@ -42,7 +42,7 @@ export class EquipmentComponent implements OnInit {
    }
    
    shouldDisable(item: object): boolean {
-    return this.cargoHold.length === this.maxItems || this.cargoMass + item["mass"] > this.maximumAllowedMass;
+    return this.cargoHold.length === this.maxItems || this.cargoMass + item["mass"] > this.maximumAllowedMass || (this.cargoHold.filter(equipment => equipment === item).length === 2);
    }
 
    emptyHold(): void {
